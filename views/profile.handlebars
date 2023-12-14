@@ -1,0 +1,53 @@
+<div id="profile" class="rounded-lg lg:rounded-l-lg lg:rounded-r-lg bg-white opacity-75 mx-6 lg:mx-0">
+  <div class="p-4 md:p-12 text-center lg:text-left">
+    <div class="row">
+      <div class="col-auto">
+        <h2 class="text-2xl name-greeting"><b><i>Welcome, {{name}}!</b></i></h2>
+        <div class="mx-auto lg:mx-0 w-5/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <h3 class="text-lg text-green-700"><b>Add a New Blog Post Below!</b></h3>
+        <br>
+        <form class="form new-project-form">
+          <div class="form-group">
+            <label for="project-name" class="text-zinc-50">Title:</label>
+            <input class="form-input" type="text" id="project-name" name="project-name" required />
+          </div>
+          <div class="form-group">
+            <label for="project-funding">Text:</label>
+            <input class="form-input" type="text" id="project-funding" name="project-funding" placeholder="body text here" />
+          </div>
+          <div class="form-group">
+            <button type="submit"
+              class="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full btn btn-primary">Create</button>
+          </div>
+        </form>
+      </div>
+      <br><br>
+      <div class="mx-auto lg:mx-0 w-5/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
+      <br>
+      {{#if projects.length}}
+      <div class="col-md-6 project-list">
+        <h3 class="text-lg text-green-700" style="margin-bottom: 20px"><b>Current posts:</b></h3>
+        {{#each projects as |project|}}
+        <div class="row mb-2 current-projects">
+          <div class="col-md-8 text-base font-bold flex items-center justify-center lg:justify-start"
+            style="margin-left: 5px">
+            <h4 class="mt-1 text-l font-semibold uppercase leading-tight truncate text-green-700">
+              {{{get_emoji}}}<a href="/project/{{project.id}}" class="hyperlink">{{project.title}}</a>
+          </div>
+          <div class="col-md-4">
+            <button class="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full proj-del-btn"
+              data-id="{{project.id}}" onclick="delButtonHandler({{project.id}})">Delete</button>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    {{/if}}
+  </div>
+</div>
+</div>
+<script src="./js/profile.js"></script>

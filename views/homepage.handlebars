@@ -1,0 +1,28 @@
+<!-- Loop over each object in the projects array -->
+{{#each projects as |project| }}
+<div id="profile" class="max-w-4xl flex-wrap mx-auto lg:my-0 text-gray-900 mb-4">
+  <div><img src="{{project.picture_link}}" alt="{{project.dish}} Image"
+      class="w-full h-64 object-cover object-center rounded-lg shadow-md">
+    <div class="relative -mt-20 mb-8 border border-gray-300 rounded-lg p-2">
+      <div class="bg-white opacity-75 p-6 rounded-lg shadow-lg">
+        <div class="flex items-baseline">
+          <span
+            class="bg-yellow-400 text-teal-800 text-xs px-2 inline-block rounded-full uppercase font-semibold tracking-wide">
+            <span for="img" aria-label="cooking"></span>
+            <!-- Pass needed_funding value to the helper function -->
+            <span class="sand-clock">&nbsp; {{format_amount project.cooking_time}}</span>
+          </span>
+        </div>
+
+        <h4 class="mt-1 text-xl font-semibold uppercase leading-tight truncate">
+          {{{get_emoji}}}
+          <a href="/project/{{project.id}}" class="hyperlink">{{project.title}}</a>
+        </h4>
+        <div class="mt-1">
+          <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>

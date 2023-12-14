@@ -1,0 +1,139 @@
+header,
+.project:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+/* keeps header on top of window when scrolling */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: #1a202cf5;
+  z-index: 1;
+}
+
+.sand-clock {
+  color: #056605;
+  font-weight: bold;
+  margin-left: -5px;
+}
+
+/* CSS styles for wider screens */
+.some-element {
+  width: 100%;
+
+}
+
+/* Media query for screens with a minimum width of 768px */
+@media (min-width: 768px) {
+  .some-element {
+    width: 50%;
+  }
+}
+
+/* Media query for screens with a minimum width of 1024px */
+@media (min-width: 1024px) {
+  .some-element {
+    width: 30%;
+
+  }
+}
+
+.wrapper {
+  display: grid;
+  place-items: center
+}
+
+.centered-content {
+  margin: 0 auto;
+  width: 50%;
+}
+
+/* Apply styles to the form headings */
+h2 {
+  color: #102e05;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Apply styles to form labels */
+label {
+  color: #555;
+  font-weight: bold;
+}
+
+/* Apply styles to form inputs */
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: black;
+}
+
+/* Apply styles to form buttons */
+.btn {
+  background-color: #102e05;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Apply styles to form buttons on hover */
+.btn:hover {
+  background-color: #102e05;
+}
+
+/* Define light and dark mode classes */
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: #1a202c;
+  color: white;
+}
+
+body .dark-text {
+  color:rgb(33, 66, 29);
+}
+
+.display-dark-btn::after {
+  content:"🌙";
+  font-size: larger;
+}
+
+.display-dark-btn:hover::after {
+  content:"☀️";
+  font-size: larger;
+}
+
+.display-light-btn::after {
+  content:"☀️";
+  font-size: larger;
+}
+
+.display-light-btn:hover::after {
+  content:"🌙";
+  font-size: larger;
+}
+
+.name-greeting {
+text-transform: capitalize;
+}
+
+/* added styling to current projects on profile */
+.current-projects {
+border: #196b5f 2px solid;
+display: flex;
+justify-content: space-between;
+padding: 5px;
+border-radius: 20px;
+}
+
+/* shows underline on hyperlink when hovering */
+.hyperlink:hover {
+text-decoration: underline;
+}
