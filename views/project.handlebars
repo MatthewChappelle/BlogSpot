@@ -22,12 +22,20 @@
         <p class="pt-2 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start">Created by
           User: {{user.name}} at {{created_at}}</p>
         <br>
+        <br>
+        <br>
+        {{#if logged_in}}
+        <Form class="userComment">
+          <input class="form-input" type="text" id="comment" placeholder="Comment here" required minlength="1" />
+          <button class="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full btn btn-primary"
+            type="submit-comment">Comment</button>
+          {{else}}
+          <a href="/login" class="text-green-700" style="padding: 10px"><b>Login to use comment function</b> &nbsp;
+            &nbsp;
+            &nbsp; &nbsp; &nbsp; </a>
+          {{/if}}
+        </Form>
       </div>
-      <Form class="userComment">
-        <input class="form-input" type="text" id="comment" placeholder="Comment here" required minlength="1" />
-        <button class="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full btn btn-primary"
-          type="submit-comment">Comment</button>
-      </Form>
     </div>
   </div>
 </div>
