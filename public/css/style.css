@@ -85,39 +85,8 @@ label {
   background-color: #102e05;
 }
 
-/* Define light and dark mode classes */
-.light-mode {
-  background-color: white;
-  color: black;
-}
-
-.dark-mode {
-  background-color: #1a202c;
-  color: white;
-}
-
 body .dark-text {
   color:rgb(33, 66, 29);
-}
-
-.display-dark-btn::after {
-  content:"🌙";
-  font-size: larger;
-}
-
-.display-dark-btn:hover::after {
-  content:"☀️";
-  font-size: larger;
-}
-
-.display-light-btn::after {
-  content:"☀️";
-  font-size: larger;
-}
-
-.display-light-btn:hover::after {
-  content:"🌙";
-  font-size: larger;
 }
 
 .name-greeting {

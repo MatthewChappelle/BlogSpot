@@ -1,16 +1,20 @@
 const router = require('express').Router();
-const { Project } = require('../../models');
+const { Project } = require('../../models/');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
   try {
+
     const newProject = await Project.create({
-      ...req.body,
+      title: req.body.blogPost,
+      text: req.body.postContent,
       user_id: req.session.user_id,
+      user_name: req.session.user_name,
     });
 
     res.status(200).json(newProject);
   } catch (err) {
+    console.log("cannot create project");
     res.status(400).json(err);
   }
 });
