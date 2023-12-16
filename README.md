@@ -30,6 +30,12 @@ This app has been in the works with the original use intended for a mealprep app
 ## Tests
 No active tests at this time. Feel free to reach out to me with any questions or concerns about functionality.
 
+Known Issues:
+html faintly showing on projects
+date not showing up
+comment feature inoperational
+no edit for previous posts
+
 ## Questions
 Feel free to reach out to me with questions, comments, concerns, and sarcastic remarks through my GitHub: [MatthewChappelle](https://github.com/MatthewChappelle) Or my email: [matt@gmail.com]
 
